@@ -1,4 +1,4 @@
-# 2026_chart_analyzer_daily🚀 Casper Sniper Bot (BingX 선물 자동매매 시스템)
+🚀 Casper Sniper Bot (BingX 선물 자동매매 시스템)
 
 본 프로젝트는 미국 장 개장 직후의 유동성을 활용하는 **'캐스퍼(Casper) 단기 돌파 전략'**을 기반으로 FVG(Fair Value Gap) 필터와 지정가 되돌림(Limit Retest) 기법을 결합하여 개발된 BingX 전용 무인 자동매매 봇입니다.
 
@@ -75,27 +75,12 @@ TELEGRAM_CHAT_ID=수신받을_채팅방_아이디
 
 🚀 실행 방법
 
-방법 A: 개발/테스트용 직접 실행 (터미널 종료 시 봇 꺼짐)
+터미널을 열고 프로젝트 폴더 경로에서 아래 명령어를 입력하여 봇을 실행합니다.
 
 npx ts-node index.ts
 
 
-방법 B: 실전용 무중단 백그라운드 실행 (PM2 권장)
-
-AWS, VPS 등 서버 환경에서 24시간 안정적으로 구동하기 위한 정석 방법입니다.
-
-# 1. PM2 전역 설치
-npm install -g pm2
-
-# 2. TypeScript 컴파일 (index.js 생성)
-npx tsc index.ts
-
-# 3. PM2로 백그라운드 실행
-pm2 start index.js --name "Casper-BTC"
-
-# 4. 실시간 로그 확인
-pm2 logs Casper-BTC
-
+(참고: 리눅스/서버 환경에서 터미널을 종료해도 봇이 계속 백그라운드에서 동작하게 하려면 nohup npx ts-node index.ts > output.log 2>&1 & 명령어를 사용할 수 있습니다.)
 
 ⚠️ 면책 조항 (Disclaimer)
 
